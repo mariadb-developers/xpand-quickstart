@@ -2,7 +2,7 @@ const mariadb = require("mariadb");
 const fs = require("fs");
 
 async function main() {
-	var serverCert = [fs.readFileSync("/path/to/skysql_chain.pem", "utf8")];
+	var serverCert = fs.readFileSync("/path/to/skysql_chain.pem", "utf8");
 
 	let connection;
 	try {
